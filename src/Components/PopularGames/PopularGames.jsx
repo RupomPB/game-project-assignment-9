@@ -1,0 +1,37 @@
+import React, { useEffect, useState } from "react";
+import PopularGameCard from "./popularGameCard";
+// import { useNavigate } from "react-router";
+// import popularGameCard from './PopularGameCard';
+
+
+
+const PopularGames = () => {
+  const [games, setGames] = useState([]);
+  // const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch("/gamesdata.json")
+      .then((res) => res.json())
+      .then((data) => setGames(data))
+      .catch((err) => console.error("Failed to load games data:", err));
+  }, []);
+
+  // Sort by rating descending and select top 3
+  const topGames = games
+    .sort((a, b) => parseFloat(b.ratings) - parseFloat(a.ratings))
+    .slice(0, 3);
+
+  return (
+    <section className="max-w-7xl mx-auto px-4 py-10 m-2">
+      <h2 className="text-3xl font-bold mb-6 text-center">🎮 Popular Games</h2>
+
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        {topGames.map((game) => (
+          <PopularGameCard key={game.id} game={game}></PopularGameCard>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default PopularGames;

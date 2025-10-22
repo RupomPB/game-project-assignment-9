@@ -42,7 +42,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
   <img className='mr-5' src={userimg}/>
-    <Link to='/login' className="btn bg-secondary text-base-100">Login</Link>
+    <Link to='/auth/login' className="btn bg-secondary text-base-100">Login</Link>
   </div>
         </div>
 </div>

@@ -25,19 +25,15 @@ const Banner = () => {
   ];
 
   return (
-    <div className=" max-w-6xl mx-auto mt-6 rounded-2xl overflow-hidden shadow-xl w-11/12 ">
-      <div className="carousel w-full">
+    <div className=" max-w-7xl mx-auto mt-6 rounded-2xl  m-2 ">
+      <div className="carousel w-full m-2 rounded-2xl">
         {games.map((game, index) => (
           <div
             id={`slide${index + 1}`}
             key={game.id}
-            className="carousel-item relative w-full"
+            className="carousel-item relative w-full m-2"
           >
-            <img
-              src={game.img}
-              alt={game.title}
-              className="w-full h-[420px] object-cover"
-            />
+            <img src={game.img} className="w-full h-[550px] object-cover"/>
             <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent"></div>
 
             <div className="absolute bottom-8 left-8 text-white">
@@ -45,7 +41,6 @@ const Banner = () => {
                 {game.title}
               </h2>
             </div>
-
             <div className="absolute flex justify-between transform -translate-y-1/2 left-4 right-4 top-1/2">
               <a
                 href={`#slide${index === 0 ? games.length : index}`}
