@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknown's Battle Ground: PUBG",
+    "coverPhoto": "//i.ibb.co/Y4mG5PpL/pubg.jpg",
+    "category": "FPS / Battle Royale",
+    "downloadLink": "https://www.pubgmobile.com/en-US/home.shtml",
+    "description": "PUBG Mobile redefined the battle royale genre with its thrilling mix of survival, shooting, and strategy. Land on a vast island, scavenge for weapons and gear, and fight against 99 other players in a constantly shrinking safe zone. Every match offers unpredictable encounters, tactical choices, and adrenaline-fueled firefights. Whether playing solo or in squads, teamwork and awareness are key to claiming the Chicken Dinner.",
+    "ratings": "4.5",
+    "developer": "Krafton"
+  },
+  {
+    "id": "2",
+    "title": "Call of Duty: Mobile",
+    "coverPhoto": "https://i.ibb.co/ZRzgvRGn/call-of-duty.jpg",
+    "category": "FPS",
+    "downloadLink": "https://www.callofduty.com/mobile",
+    "description": "Call of Duty: Mobile brings the legendary franchise to your fingertips with console-quality graphics, responsive controls, and intense game modes. Jump into classic maps from the Call of Duty series, engage in fast-paced 5v5 team deathmatches, or battle it out in a massive 100-player battle royale. Customize your loadouts, unlock operators, and experience seasonal events packed with new content and rewards.",
+    "ratings": "4.7",
+    "developer": "Activision"
+  },
+  {
+    "id": "3",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://i.ibb.co/0jbGfW4Q/genshin-impact.jpg",
+    "category": "Adventure RPG",
+    "downloadLink": "https://genshin.hoyoverse.com/",
+    "description": "Genshin Impact invites players into the breathtaking world of Teyvat, a vast open world filled with secrets, quests, and elemental magic. You play as the Traveler, exploring seven unique nations inspired by real-world cultures. Engage in fluid, action-packed combat by switching between characters and mastering elemental combinations. With stunning visuals, an enchanting soundtrack, and frequent updates, Genshin Impact delivers a truly immersive RPG experience.",
+    "ratings": "4.8",
+    "developer": "HoYoverse"
+  },
+  {
+    "id": "4",
+    "title": "Clash Royale",
+    "coverPhoto": "https://i.ibb.co/v4dkmdY4/Clash-Royale.jpg",
+    "category": "Strategy",
+    "downloadLink": "https://clashroyale.com/",
+    "description": "Clash Royale combines card collection, real-time strategy, and tower defense in one addictive experience. Collect and upgrade dozens of cards featuring Clash of Clans troops, spells, and defenses. Challenge players around the world in fast-paced duels where every move counts. Build your ultimate battle deck, destroy enemy towers, and climb the leaderboards to prove your strategic mastery.",
+    "ratings": "4.4",
+    "developer": "Supercell"
+  },
+  {
+    "id": "5",
+    "title": "Among Us",
+    "coverPhoto": "https://i.ibb.co/SDt0CSt6/Among-Us.jpg",
+    "category": "Party / Strategy",
+    "downloadLink": "https://innersloth.com/gameAmongUs.php",
+    "description": "Among Us is a hilarious and suspenseful multiplayer game of teamwork and betrayal. Set aboard a spaceship, players work together to complete tasks — but beware, as impostors lurk among the crew. Use communication, observation, and deception to identify or disguise the true culprits. Each round delivers unexpected twists, tense moments, and endless laughter whether played online or with friends locally.",
+    "ratings": "4.3",
+    "developer": "Innersloth"
+  },
+  {
+    "id": "6",
+    "title": "Apex Legends Mobile",
+    "coverPhoto": "https://i.ibb.co/j7xxwZB/apex-legends.jpg",
+    "category": "FPS / Battle Royale",
+    "downloadLink": "https://www.ea.com/games/apex-legends",
+    "description": "Apex Legends Mobile brings the award-winning battle royale experience to mobile devices with stunning visuals and smooth gameplay. Choose from a growing roster of Legends, each with their own unique abilities and playstyles. Work together with your squad to outmaneuver enemies and become the last team standing. Fast-paced action, fluid movement, and tactical teamwork make every match unforgettable.",
+    "ratings": "4.6",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "7",
+    "title": "Minecraft",
+    "coverPhoto": "https://i.ibb.co/kg8jgq68/Minecraft.jpg",
+    "category": "Sandbox / Adventure",
+    "downloadLink": "https://www.minecraft.net/",
+    "description": "Minecraft is the ultimate sandbox game where creativity and survival collide. Explore procedurally generated worlds filled with mountains, caves, and endless resources. Build everything from humble homes to massive cities using blocks and imagination. Switch to Survival Mode to gather materials and fight off mobs, or play in Creative Mode for unlimited building freedom. The possibilities are truly endless.",
+    "ratings": "4.9",
+    "developer": "Mojang Studios"
+  },
+  {
+    "id": "8",
+    "title": "Fortnite",
+    "coverPhoto": "https://i.ibb.co/nMK7CVjv/Fortnite.jpg",
+    "category": "Battle Royale",
+    "downloadLink": "https://www.epicgames.com/fortnite/",
+    "description": "Fortnite is more than just a battle royale — it’s a living, ever-evolving world of creativity and chaos. Build, fight, and explore in constantly updated environments featuring crossover events with pop culture icons. Choose between modes like Zero Build for pure combat or Creative Mode to design your own experiences. With fresh seasons, skins, and storylines, Fortnite stays exciting year after year.",
+    "ratings": "4.6",
+    "developer": "Epic Games"
+  },
+  {
+    "id": "9",
+    "title": "League of Legends: Wild Rift",
+    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/7/71/League_of_Legends_Wild_Rift.png",
+    "category": "MOBA",
+    "downloadLink": "https://i.ibb.co/GvstDL8j/League-of-Legends-Wild-Rift.jpg",
+    "description": "League of Legends: Wild Rift is a fast-paced 5v5 multiplayer online battle arena (MOBA) designed specifically for mobile. Choose from a vast lineup of iconic champions, each with unique skills and playstyles. Work with your team to destroy enemy turrets and take down the opposing Nexus. Smooth controls, short match times, and deep strategy make Wild Rift a perfect on-the-go MOBA experience.",
+    "ratings": "4.7",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "10",
+    "title": "Valorant",
+    "coverPhoto": "https://i.ibb.co/9fRyF1g/valorant.jpg",
+    "category": "Tactical Shooter",
+    "downloadLink": "https://i.ibb.co/9fRyF1g/valorant.jpg",
+    "description": "Valorant is a team-based tactical shooter where precision aim and creative strategy define every battle. Play as one of many unique Agents, each equipped with distinct abilities that complement tight gunplay. Engage in intense 5v5 matches that reward coordination, planning, and skill. With regular updates, competitive ranked play, and a growing esports scene, Valorant sets a new standard for modern shooters.",
+    "ratings": "4.8",
+    "developer": "Riot Games"
+  }
+]
