@@ -6,6 +6,7 @@ import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import GamesDetails from "../Pages/GamesDetails";
 import PrivateRoute from "../Provider/PrivateRoute";
+import Contact from "../Pages/Contact";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
             {
                 path: '',
                 element: <Home></Home>,
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
             }
         ]
     },
