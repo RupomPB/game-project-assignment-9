@@ -1,18 +1,19 @@
 import React, { use } from "react";
 import logoImg from "../assets/logo.png";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import userimg from "../assets/user.png";
 import { AuthContext } from "../Provider/AuthProvider";
 const Navbar = () => {
   const { user, logoutUser } = use(AuthContext);
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     logoutUser()
       .then(() => {
-        alert(" Sign-out successful.")
+        alert(" Sign-out successful.");
       })
       .catch((error) => {
-        alert(error.message)
+        alert(error.message);
       });
   };
 
@@ -24,13 +25,21 @@ const Navbar = () => {
       <NavLink className="ml-5" to="/contact">
         <li>Contact</li>
       </NavLink>
+      {!user && (
+        <>
+          <NavLink className="ml-5" to="/auth/login">
+            <li>Login </li>
+          </NavLink>
+          <NavLink className="ml-5" to="/auth/register">
+            <li>Register </li>
+          </NavLink>
+        </>
+      )}
     </>
   );
   return (
     <div className="navbar bg-base-100 shadow-sm ">
       <div className="w-11/12 mx-auto flex">
-       
-
         <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,13 +69,17 @@ const Navbar = () => {
           <div>
             <img className="w-15 h-15" src={logoImg} />
           </div>
-           {user && user.email}
+          {/* {user && user.email} */}
         </div>
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-2">{links}</ul>
         </div>
         <div className="navbar-end">
-          <img className="mr-5 w-11 rounded-full" src={`${user? user.photoURL : userimg}`} />
+        {/* user image show  */}
+          <img onClick={()=>navigate('/profile')}
+            className="mr-5 w-11 rounded-full"
+            src={`${user ? user.photoURL : userimg}`}
+          />
           {user ? (
             <button
               onClick={handleLogout}
@@ -81,9 +94,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      
     </div>
-    
   );
 };
 

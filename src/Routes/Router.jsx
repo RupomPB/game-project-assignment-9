@@ -7,6 +7,8 @@ import Login from "../Pages/Login";
 import GamesDetails from "../Pages/GamesDetails";
 import PrivateRoute from "../Provider/PrivateRoute";
 import Contact from "../Pages/Contact";
+import Profile from "../Pages/Profile";
+import ProfileUpdate from "../Pages/ProfileUpdate";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +45,18 @@ const router = createBrowserRouter([
             <GamesDetails></GamesDetails>
         </PrivateRoute>,
         loader: ()=>fetch('/gamesdata.json')
+    },
+    {
+        path:'/profile',
+        element:<PrivateRoute>
+            <Profile></Profile>
+        </PrivateRoute>
+    },
+    {
+        path: '/profile/update',
+        element: <PrivateRoute>
+            <ProfileUpdate></ProfileUpdate>
+        </PrivateRoute>
     },
     {
         path: '/*',

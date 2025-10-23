@@ -54,8 +54,9 @@ const Register = () => {
     signInGoogle()
       .then((result) => {
         const user = result.user;
-        alert("sign in with google", user);
+        alert("sign in with google Successfully", user);
         setUser(user);
+        navigate('/');
 
       })
       .catch((error) => {
