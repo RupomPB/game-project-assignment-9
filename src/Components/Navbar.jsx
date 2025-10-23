@@ -7,7 +7,6 @@ const Navbar = () => {
   const { user, logoutUser } = use(AuthContext);
 
   const handleLogout = () => {
-    console.log("jdskfsdjf");
     logoutUser()
       .then(() => {
         alert(" Sign-out successful.")

@@ -1,9 +1,14 @@
-import React, { use } from "react";
-import { Link } from "react-router";
+import React, { use, useState } from "react";
+import { Link, useLocation, useNavigate,  } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
-  const { loginUser, setUser, signInGoogle } = use(AuthContext);
+  const { loginUser, signInGoogle } = use(AuthContext);
+  const [error, setError] = useState('')
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log(location)
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -14,10 +19,11 @@ const Login = () => {
     loginUser(email, password)
       .then((result) => {
         const user = result.user;
-        setUser(user);
+        console.log(user);
+        navigate(`${location.state ? location.state : "/"}`)
       })
       .catch((error) => {
-        alert(error.message);
+        setError(error.message)
       });
   };
 
@@ -25,7 +31,8 @@ const Login = () => {
     signInGoogle()
     .then(result =>{
       const user = result.user;
-      alert("sign in with google", user)
+      alert("sign in with google", user);
+      
     } )
     .catch(error=>{
       alert(error.message)
@@ -97,6 +104,9 @@ const Login = () => {
               </svg>
               Login with Google
             </button>
+            {
+              error && <p className='text-red-500 text-xs'>{error}</p>
+            }
             <p className=" font-semibold text-center py-4">
               Don't have a account?..
               <Link className=" text-secondary " to="/auth/register">
