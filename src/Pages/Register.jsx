@@ -1,9 +1,11 @@
 import React, { use, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Register = () => {
-  const { createUser, setUser, signInGoogle } = use(AuthContext);
+
+  const navigate = useNavigate();
+  const { createUser, setUser, signInGoogle, userInfo } = use(AuthContext);
   const [passwordError, setPasswordError] = useState("");
 
   const handleRegister = (e) => {
@@ -11,7 +13,9 @@ const Register = () => {
     const form = e.target;
     const email = form.email.value;
     const name = form.name.value;
+    const photo = form.photo.value;
     const password = form.password.value;
+
     console.log(email, name, password);
     if (password.length < 6) {
       setPasswordError("Password should be minimum  6 character");
@@ -31,7 +35,15 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        setUser(user);
+        userInfo({displayName: name,  photoURL: photo})
+        .then(()=>{
+          setUser({...user, displayName: name,  photoURL: photo});
+          navigate('/')
+        })
+        .catch(error =>{
+          alert(error.message)
+          setUser(user)
+        })
       })
       .catch((error) => {
         alert(error.message);
@@ -43,6 +55,8 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         alert("sign in with google", user);
+        setUser(user);
+
       })
       .catch((error) => {
         alert(error.message);

@@ -66,7 +66,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-2">{links}</ul>
         </div>
         <div className="navbar-end">
-          <img className="mr-5" src={userimg} />
+          <img className="mr-5" src={`${user? user.photoURL : userimg}`} />
           {user ? (
             <button
               onClick={handleLogout}
