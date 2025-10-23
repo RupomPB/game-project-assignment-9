@@ -33,7 +33,7 @@ const Banner = () => {
             key={game.id}
             className="carousel-item relative w-full m-2"
           >
-            <img src={game.img} className="w-full h-[550px] object-cover"/>
+            <img src={game.img} className="w-full h-[600px] object-cover"/>
             <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent"></div>
 
             <div className="absolute bottom-8 left-8 text-white">

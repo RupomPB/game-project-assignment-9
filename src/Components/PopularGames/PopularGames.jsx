@@ -19,7 +19,7 @@ const PopularGames = () => {
   // Sort by rating descending and select top 3
   const topGames = games
     .sort((a, b) => parseFloat(b.ratings) - parseFloat(a.ratings))
-    .slice(0, 3);
+    .slice(0, 6);
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-10 m-2">

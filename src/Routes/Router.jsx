@@ -4,6 +4,7 @@ import AuthLayout from "../Layouts/AuthLayout";
 import Home from "../Pages/Home";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
+import GamesDetails from "../Pages/GamesDetails";
 
 const router = createBrowserRouter([
     {
@@ -31,8 +32,9 @@ const router = createBrowserRouter([
         ]
     },
     {
-        path: '/games',
-        element: <h1>games layout</h1>
+        path: '/Games/:id',
+        element: <GamesDetails></GamesDetails>,
+        loader: ()=>fetch('/gamesdata.json')
     },
     {
         path: '/*',
