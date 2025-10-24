@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Components/Navbar";
 import Banner from "../Components/Banner";
 import PopularGames from "../Components/PopularGames/PopularGames";
@@ -11,8 +11,25 @@ const HomeLayouts = () => {
 
   const {state} = useNavigation();
 
+  const routeTitles = {
+    "/": "Home - My Game Site",
+    "/contact": "Contact Us - My Game Site",
+  };
+
+  // update document.title dynamically
+  useEffect(() => {
+    if (state === "loading") {
+      document.title = "Loading...";
+    } else {
+      document.title = routeTitles[location.pathname] || "My Game Site";
+    }
+  }, [location.pathname, state]);
+
+
   return (
     <div className=" bg-base-300">
+    
+   
       <header>
         <Navbar></Navbar>
       </header>

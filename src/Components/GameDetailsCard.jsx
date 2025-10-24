@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoIosStar } from "react-icons/io";
 
 const GameDetailsCard = ({ games }) => {
   console.log(games);
+
+      useEffect(() => {
+      document.title = `${games.title} - My Game Site`;
+    }, [games.title]);
+  
   return (
     <div className=" ">
+    
       <div className="relative w-full h-[550px] rounded-2xl overflow-hidden shadow-lg">
         <img src={games.coverPhoto} className="w-full h-full object-cover" />
 

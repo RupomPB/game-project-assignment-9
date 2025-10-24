@@ -1,4 +1,4 @@
-import React, { use, useRef, useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate,  } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 
@@ -10,6 +10,10 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location)
+
+  useEffect(() => {
+    document.title = "Login - My Game Site";
+  }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -24,7 +28,19 @@ const Login = () => {
         navigate(`${location.state ? location.state : "/"}`)
       })
       .catch((error) => {
-        setError(error.message)
+        switch(error.code){
+        case 'auth/user-not-found':
+          setError("User not found. Please check your email.");
+          break;
+        case 'auth/wrong-password':
+          setError("Incorrect password. Please try again.");
+          break;
+        case 'auth/invalid-email':
+          setError("Invalid email address.");
+          break;
+        default:
+          setError("Login failed. Please try again.");
+      }
       });
   };
 

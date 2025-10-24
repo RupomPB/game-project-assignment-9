@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -9,6 +9,10 @@ const ProfileUpdate = () => {
   const [name, setName] = useState(user?.displayName || "");
   const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Profile-Update - My Game Site";
+  }, []);
 
   const handleUpdate = (e) => {
     e.preventDefault();

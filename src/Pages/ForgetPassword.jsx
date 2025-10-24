@@ -1,4 +1,4 @@
-import React, { use, useRef } from 'react';
+import React, { use, useEffect, useRef } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router';
 
@@ -10,6 +10,10 @@ const ForgetPassword = () => {
     const emailRef = useRef();
 
     const defaultEmail =location.state?.email || "";
+
+    useEffect(() => {
+    document.title = "Forget-Password - My Game Site";
+  }, []);
 
     const handleResetPassword = (e)=>{
         e.preventDefault();

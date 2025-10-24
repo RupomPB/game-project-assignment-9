@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 
@@ -7,6 +7,10 @@ const Register = () => {
   const navigate = useNavigate();
   const { createUser, setUser, signInGoogle, userInfo } = use(AuthContext);
   const [passwordError, setPasswordError] = useState("");
+
+  useEffect(() => {
+    document.title = "Register - My Game Site";
+  }, []);
 
   const handleRegister = (e) => {
     e.preventDefault();

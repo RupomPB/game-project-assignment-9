@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useEffect } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import userimg from '../assets/user.png'
 import Navbar from '../Components/Navbar';
@@ -8,6 +8,10 @@ import { Link } from 'react-router';
 const Profile = () => {
 
     const {user } = use(AuthContext);
+
+    useEffect(() => {
+    document.title = "Profile - My Game Site";
+  }, []);
 
     return (<>
 <div>

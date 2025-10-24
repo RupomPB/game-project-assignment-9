@@ -13,6 +13,16 @@ const AuthProvider = ({children}) => {
 
     const auth = getAuth(app);
 
+     const routeTitles = {
+    "/auth/login": "Login - My Game Site",
+    "/auth/register": "Register - My Game Site",
+    "/forget-password": "Reset Password - My Game Site",
+  };
+    useEffect(() => {
+    document.title = routeTitles[location.pathname] || "My Game Site";
+  }, [location.pathname]);
+
+
     // register user 
     const createUser = (email, password)=>{
         setLoading(true);

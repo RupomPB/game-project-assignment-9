@@ -12,6 +12,8 @@ const GamesDetails = () => {
 
     // console.log(data, id, games)
 
+ 
+
     useEffect(()=>{
         const gamesDetails = data.find((singleGame)=> singleGame.id == id);
         setGames(gamesDetails);
