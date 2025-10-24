@@ -79,16 +79,7 @@
     "ratings": "4.6",
     "developer": "Epic Games"
   },
-  {
-    "id": "9",
-    "title": "League of Legends: Wild Rift",
-    "coverPhoto": "https://upload.wikimedia.org/wikipedia/en/7/71/League_of_Legends_Wild_Rift.png",
-    "category": "MOBA",
-    "downloadLink": "https://i.ibb.co/GvstDL8j/League-of-Legends-Wild-Rift.jpg",
-    "description": "League of Legends: Wild Rift is a fast-paced 5v5 multiplayer online battle arena (MOBA) designed specifically for mobile. Choose from a vast lineup of iconic champions, each with unique skills and playstyles. Work with your team to destroy enemy turrets and take down the opposing Nexus. Smooth controls, short match times, and deep strategy make Wild Rift a perfect on-the-go MOBA experience.",
-    "ratings": "4.7",
-    "developer": "Riot Games"
-  },
+ 
   {
     "id": "10",
     "title": "Valorant",

@@ -9,6 +9,8 @@ import PrivateRoute from "../Provider/PrivateRoute";
 import Contact from "../Pages/Contact";
 import Profile from "../Pages/Profile";
 import ProfileUpdate from "../Pages/ProfileUpdate";
+import Loading from "../Pages/Loading";
+import ForgetPassword from "../Pages/ForgetPassword";
 
 const router = createBrowserRouter([
     {
@@ -44,7 +46,9 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
             <GamesDetails></GamesDetails>
         </PrivateRoute>,
-        loader: ()=>fetch('/gamesdata.json')
+        loader: ()=>fetch('/gamesdata.json'),
+        hydrateFallbackElement: <Loading></Loading>
+        
     },
     {
         path:'/profile',
@@ -57,6 +61,10 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
             <ProfileUpdate></ProfileUpdate>
         </PrivateRoute>
+    },
+    {
+        path:'/forget-password',
+        element: <ForgetPassword></ForgetPassword>
     },
     {
         path: '/*',

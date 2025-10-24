@@ -1,10 +1,11 @@
-import React, { use, useState } from "react";
+import React, { use, useRef, useState } from "react";
 import { Link, useLocation, useNavigate,  } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
   const { loginUser, signInGoogle } = use(AuthContext);
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
+  const emailRef = useRef()
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -27,12 +28,25 @@ const Login = () => {
       });
   };
 
+  // forget password
+  const handleForgetPassword=()=>{
+    const email = emailRef.current.value;
+    navigate('/forget-password', {state: {email}});
+    // resetPassword(email)
+    // .then(()=>{
+    //   alert('please check your email')
+    // })
+    // .catch(error=>{
+    //   alert(error.message)
+    // })
+  }
+
   const handleGoogle =()=>{
     signInGoogle()
     .then(result =>{
       const user = result.user;
       alert("sign in with google", user);
-      
+      navigate(location.state ? location.state: '/')
     } )
     .catch(error=>{
       alert(error.message)
@@ -54,6 +68,8 @@ const Login = () => {
               className="input"
               placeholder="Email"
               name="email"
+              ref ={emailRef}
+              required
             />
             {/* password field*/}
             <label className="label">Password</label>
@@ -62,8 +78,9 @@ const Login = () => {
               className="input"
               placeholder="Password"
               name="password"
+              required
             />
-            <div>
+            <div onClick={handleForgetPassword}>
               <a className="link link-hover">Forgot password?</a>
             </div>
 
@@ -73,7 +90,7 @@ const Login = () => {
             >
               Login
             </button>
-            {/* Google */}
+            {/* Google sign in field */}
             <button onClick={handleGoogle} className="btn bg-white text-black border-[#e5e5e5]">
               <svg
                 aria-label="Google logo"
