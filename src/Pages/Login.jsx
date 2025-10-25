@@ -10,7 +10,7 @@ const Login = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(location)
+  // console.log(location)
 
   useEffect(() => {
     document.title = "Login - My Game Site";
@@ -21,11 +21,11 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    // console.log(email, password);
     loginUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
         toast.success("Login Successfully")
         navigate(`${location.state ? location.state : "/"}`)
       })

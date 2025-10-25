@@ -31,7 +31,7 @@ const ForgetPassword = () => {
              window.open('https://mail.google.com', '_blank');
         })
         .catch(error =>{
-            alert(error.message);
+            toast.error(error.message);
         })
 
     }

@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 
 const NewsLetter = () => {
 
@@ -9,10 +10,10 @@ const NewsLetter = () => {
         // console.log(email);
         e.target.reset();
         if(email){
-            alert(`Thanks for Subscribe ${email}`)
+            toast.success(`Thanks for Subscribe ${email}`)
             
         }else{
-            alert('Please enter a valid email')
+            toast.info('Please enter a valid email')
         }
     }
 

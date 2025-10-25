@@ -10,7 +10,7 @@ import Loading from "../Pages/Loading";
 const HomeLayouts = () => {
 
   const {state} = useNavigation();
-  console.log(state)
+  // console.log(state)
 
   const routeTitles = {
     "/": "Home - My Game Site",

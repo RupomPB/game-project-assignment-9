@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PopularGameCard from "./popularGameCard";
 import Loading from "../../Pages/Loading";
+import { toast } from "react-toastify";
 // import { useNavigate } from "react-router";
 // import popularGameCard from './PopularGameCard';
 
@@ -19,7 +20,7 @@ const PopularGames = ({setLoading}) => {
       }
    
     )
-      .catch((err) => console.error("Failed to load games data:", err));
+      .catch((err) => toast.error("Failed to load games data:", err));
   }, []);
 
   // Sort by rating descending and select top 3

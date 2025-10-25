@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { IoIosStar } from "react-icons/io";
 
 const GameDetailsCard = ({ games }) => {
-  console.log(games);
+  // console.log(games);
 
       useEffect(() => {
       document.title = `${games.title} - My Game Site`;
