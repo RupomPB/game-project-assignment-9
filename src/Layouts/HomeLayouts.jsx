@@ -10,6 +10,7 @@ import Loading from "../Pages/Loading";
 const HomeLayouts = () => {
 
   const {state} = useNavigation();
+  console.log(state)
 
   const routeTitles = {
     "/": "Home - My Game Site",
@@ -23,7 +24,7 @@ const HomeLayouts = () => {
     } else {
       document.title = routeTitles[location.pathname] || "My Game Site";
     }
-  }, [location.pathname, state]);
+  }, [location.pathname , state]);
 
 
   return (

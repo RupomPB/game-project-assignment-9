@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Navigate, useNavigate } from "react-router";
+import { toast } from "react-toastify";
 
 const ProfileUpdate = () => {
   const { user, userInfo } = use(AuthContext);
@@ -22,11 +23,11 @@ const ProfileUpdate = () => {
       photoURL: photoURL,
     })
       .then(() => {
-        alert("✅ Profile Updated Successfully");
+        toast.success("✅ Profile Updated Successfully");
         navigate("/profile");
       })
       .catch((error) => {
-        alert(error.message);
+        toast.error(error.message);
       });
   };
 

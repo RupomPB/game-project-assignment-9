@@ -1,16 +1,37 @@
-# React + Vite
+#  Game Project Assignment 9
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Project Name
+**Game Project Assignment 9**
 
-Currently, two official plugins are available:
+## 📝 Purpose
+A modern gaming website built with **React**, **Tailwind CSS**, and **Firebase**.  
+Users can explore popular games, view detailed game info, register/login, and download games.  
+The project demonstrates responsive design, routing, authentication, and interactive UI components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
+- Fully responsive design for mobile, tablet, and desktop.
+- Animated Banner with popular games using `motion`.
+- User authentication with **Firebase** (Email/Password & Google Sign-In).
+- Private routes for protected pages like Profile and Game Details.
+- Games listing with cards and rating display.
+- Detailed game pages with description, category, developer info, and download link.
+- Newsletter subscription section.
+- 404 / Not Found page.
+- Loading spinner on page transitions.
+- Toast notifications for actions like login, registration, and errors.
 
-## Expanding the ESLint configuration
+## npm Packages Used
+- react  – Frontend library.
+- react-router – Routing and navigation.
+- tailwindcss – Utility-first CSS framework.
+- daisyui – Tailwind CSS components plugin.
+- firebase – Backend authentication and data storage.
+- motion – Animation for React components.
+- react-icons – Icons for UI.
+- react-toastify – Toast notifications.
+- vite – Development server and build tool.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 👨 Author
+**Rupom Prosad Badhan** – [GitHub Profile](https://github.com/RupomPB)

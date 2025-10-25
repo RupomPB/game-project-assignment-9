@@ -1,6 +1,7 @@
 import React, { use, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
 
@@ -45,7 +46,7 @@ const Register = () => {
           navigate('/')
         })
         .catch(error =>{
-          alert(error.message)
+          toast.error(error.message)
           setUser(user)
         })
       })
@@ -58,13 +59,13 @@ const Register = () => {
     signInGoogle()
       .then((result) => {
         const user = result.user;
-        alert("sign in with google Successfully", user);
+        toast.success("sign in with google Successfully", user);
         setUser(user);
         navigate('/');
 
       })
       .catch((error) => {
-        alert(error.message);
+        toast.error(error.message);
       });
   };
 

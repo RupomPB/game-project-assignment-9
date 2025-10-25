@@ -11,6 +11,7 @@ import Profile from "../Pages/Profile";
 import ProfileUpdate from "../Pages/ProfileUpdate";
 import Loading from "../Pages/Loading";
 import ForgetPassword from "../Pages/ForgetPassword";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -18,8 +19,10 @@ const router = createBrowserRouter([
         element: <HomeLayouts></HomeLayouts>,
         children: [
             {
-                path: '',
+                path: '/',
                 element: <Home></Home>,
+                // loader: ()=> fetch("/gamesdata.json")
+
             },
             {
                 path: '/contact',
@@ -47,7 +50,7 @@ const router = createBrowserRouter([
             <GamesDetails></GamesDetails>
         </PrivateRoute>,
         loader: ()=>fetch('/gamesdata.json'),
-        hydrateFallbackElement: <Loading></Loading>
+        // hydrateFallbackElement: <Loading></Loading>
         
     },
     {
@@ -68,7 +71,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/*',
-        element: <h1>error 404 layout</h1>
+        element: <ErrorPage></ErrorPage>
     },
 ]);
 
