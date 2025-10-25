@@ -1,15 +1,22 @@
 import React from 'react';
 import { IoStar } from 'react-icons/io5';
 import {  useNavigate } from 'react-router';
+import { motion } from 'motion/react';
 
 const PopularGameCard = ({game}) => {
     const navigate = useNavigate();
     return (
-       <div
-            key={game.id}
+       <motion.div key={game.id}
             className="card bg-base-100 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer"
             onClick={() => navigate(`/games/${game.id}`)}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5}}
+            whileHover={{scale: 1.03,boxShadow: "0 10px 20px rgba(0,0,0,0.2)"}}
           >
+       
+
+           
             <figure>
               <img
                 src={game.coverPhoto}
@@ -27,7 +34,7 @@ const PopularGameCard = ({game}) => {
                 <span className="text-yellow-500"><IoStar /></span>
               </div>
             </div>
-          </div>
+       </motion.div>
     );
 };
 
