@@ -27,7 +27,7 @@ const NewsLetter = () => {
         <div >
 
            <form onSubmit={handleSubscribe} className='flex flex-col sm:flex-row gap-3 justify-center sm:justify-end'>
-            <input className='input input-bordered input-md w-full sm:w-80' type='email' name='email' placeholder='Enter your Email' required/>
+            <input className='input input-bordered input-md w-full sm:w-80 text-black' type='email' name='email' placeholder='Enter your Email' required/>
             <button type='submit' className='btn-secondary btn w-full sm:w-auto'>Subscribe </button>
            </form>
         </div>
