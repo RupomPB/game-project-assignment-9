@@ -56,9 +56,9 @@ const router = createBrowserRouter([
     },
     {
         path: '/Games/:id',
-        element: <PrivateRoute>
-            <GamesDetails></GamesDetails>
-        </PrivateRoute>,
+        element: 
+            <GamesDetails></GamesDetails>,
+        
         loader: ()=>fetch('/gamesdata.json'),
         // hydrateFallbackElement: <Loading></Loading>
         

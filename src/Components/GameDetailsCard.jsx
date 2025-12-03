@@ -48,7 +48,7 @@ const GameDetailsCard = ({ games }) => {
           href={games.downloadLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn bg-linear-to-r from-[#28EBE8] to-[#468CE8] text-white"
+          className="btn bg-secondary text-white"
         >
           Download Game
         </a>
