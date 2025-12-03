@@ -12,6 +12,8 @@ import ProfileUpdate from "../Pages/ProfileUpdate";
 import Loading from "../Pages/Loading";
 import ForgetPassword from "../Pages/ForgetPassword";
 import ErrorPage from "../Pages/ErrorPage";
+import AllItems from "../Pages/AllItems";
+import AboutUs from "../Pages/AboutUs";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact></Contact>
+            },
+            {
+                path: '/all-items',
+                element: <AllItems></AllItems>
+            },
+            {
+                path: '/about-us',
+                element: <AboutUs></AboutUs>
             }
         ]
     },

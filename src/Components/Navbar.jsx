@@ -23,11 +23,25 @@ const Navbar = () => {
       <NavLink className="ml-5" to="/">
         <li>Home </li>
       </NavLink>
+      <NavLink className="ml-5" to="/all-items">
+        <li>All Items</li>
+      </NavLink>
       <NavLink className="ml-5" to="/contact">
         <li>Contact</li>
       </NavLink>
+       <NavLink className="ml-5" to="/about-us">
+        <li>About Us</li>
+      </NavLink>
+      {
+        user && (
+          <NavLink className="ml-5" to="/profile">
+            <li>My Profile </li>
+          </NavLink>
+        )
+      }
       {!user && (
         <>
+        
           <NavLink className="ml-5" to="/auth/login">
             <li>Login </li>
           </NavLink>
@@ -39,8 +53,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm ">
-      <div className="w-11/12 mx-auto flex">
+    <div className="navbar  bg-base-100 shadow-sm   mx-auto">
+      <div className="w-9/12 mx-auto flex">
         <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -67,8 +81,9 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <div>
+          <div className="flex items-center justify-between ">
             <img className="w-15 h-15" src={logoImg} />
+            <p className="font-bold text-2xl text-secondary">GamerHub</p>
           </div>
           {/* {user && user.email} */}
         </div>

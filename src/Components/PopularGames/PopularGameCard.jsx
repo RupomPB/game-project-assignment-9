@@ -7,8 +7,8 @@ const PopularGameCard = ({game}) => {
     const navigate = useNavigate();
     return (
        <motion.div key={game.id}
-            className="card bg-base-100 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer"
-            onClick={() => navigate(`/games/${game.id}`)}
+            className="w-full card bg-base-100 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer"
+            
             initial={{opacity: 0, y: 20}}
             animate={{opacity: 1, y: 0}}
             transition={{duration: 0.5}}
@@ -28,7 +28,9 @@ const PopularGameCard = ({game}) => {
               <p className="text-sm text-gray-500">{game.category}</p>
               <p className="text-gray-700 mt-2 line-clamp-3">
                 {game.description}
+                
               </p>
+              <button onClick={() => navigate(`/games/${game.id}`)} className='text-right text-blue-500 hover:text-blue-700'>see more</button>
               <div className="mt-3 flex items-center gap-2">
                 <span className="font-semibold">{game.ratings}</span>
                 <span className="text-yellow-500"><IoStar /></span>

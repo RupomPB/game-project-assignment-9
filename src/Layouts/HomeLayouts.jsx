@@ -31,7 +31,7 @@ const HomeLayouts = () => {
     <div className=" bg-base-300">
     
    
-      <header>
+      <header className="sticky top-0 z-50">
         <Navbar></Navbar>
       </header>
       <main  className="min-h-screen">

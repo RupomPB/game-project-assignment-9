@@ -21,7 +21,7 @@ const PopularGames = ({setLoading}) => {
    
     )
       .catch((err) => toast.error("Failed to load games data:", err));
-  }, []);
+  }, [setLoading]);
 
   // Sort by rating descending and select top 3
   const topGames = games
@@ -29,7 +29,7 @@ const PopularGames = ({setLoading}) => {
     .slice(0, 6);
  
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10 m-2">
+    <section className=" px-4 py-10 m-2">
       <h2 className="text-3xl font-bold mb-6 text-center">🎮 Popular Games</h2>
 
      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
