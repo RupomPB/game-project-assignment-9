@@ -37,7 +37,7 @@ const Banner = () => {
   },[games.length])
 
   return (
-        <div className="mx-4 mt-6 rounded-2xl overflow-hidden relative">
+        <div className=" mt-6 rounded-2xl overflow-hidden relative">
       <AnimatePresence mode="wait">
         <motion.img
           key={games[currentIndex].id}

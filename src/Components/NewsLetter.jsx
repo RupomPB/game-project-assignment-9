@@ -19,7 +19,7 @@ const NewsLetter = () => {
 
     return (
         <div className='max-w-7xl mx-auto  flex flex-col md:flex-row gap-2  justify-start items-center ' >
-        <div className='mx-4 text-center sm:text-left flex-1 py-2'>
+        <div className=' text-center sm:text-left flex-1 py-2'>
            <h2 className=' font-bold text-2xl mb-2 '>Subscribe to our Newsletter</h2>
            <p className=' text-lg'> Get the latest game updates, new releases, <br></br> and exclusive offers delivered straight to your inbox</p> 
 

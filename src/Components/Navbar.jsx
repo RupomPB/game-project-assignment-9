@@ -18,40 +18,74 @@ const Navbar = () => {
       });
   };
 
-  const links = (
-    <>
-      <NavLink className="ml-5" to="/">
-        <li>Home </li>
-      </NavLink>
-      <NavLink className="ml-5" to="/all-items">
-        <li>All Items</li>
-      </NavLink>
-      <NavLink className="ml-5" to="/contact">
-        <li>Contact</li>
-      </NavLink>
-       <NavLink className="ml-5" to="/about-us">
-        <li>About Us</li>
-      </NavLink>
-      {
-        user && (
-          <NavLink className="ml-5" to="/profile">
-            <li>My Profile </li>
-          </NavLink>
-        )
+ const links = (
+  <>
+    <NavLink
+      to="/"
+      className={({ isActive }) =>
+        `ml-5 ${isActive ? "text-secondary font-bold border-b-2 border-secondary" : ""}`
       }
-      {!user && (
-        <>
-        
-          <NavLink className="ml-5" to="/auth/login">
-            <li>Login </li>
-          </NavLink>
-          <NavLink className="ml-5" to="/auth/register">
-            <li>Register </li>
-          </NavLink>
-        </>
-      )}
-    </>
-  );
+    >
+      <li>Home</li>
+    </NavLink>
+    <NavLink
+      to="/all-items"
+      className={({ isActive }) =>
+        `ml-5 ${isActive ? "text-secondary font-bold border-b-2 border-secondary" : ""}`
+      }
+    >
+      <li>All Items</li>
+    </NavLink>
+    <NavLink
+      to="/contact"
+      className={({ isActive }) =>
+        `ml-5 ${isActive ? "text-secondary font-bold border-b-2 border-secondary" : ""}`
+      }
+    >
+      <li>Contact</li>
+    </NavLink>
+    <NavLink
+      to="/about-us"
+      className={({ isActive }) =>
+        `ml-5 ${isActive ? "text-secondary font-bold border-b-2 border-secondary" : ""}`
+      }
+    >
+      <li>About Us</li>
+    </NavLink>
+
+    {user && (
+      <NavLink
+        to="/profile"
+        className={({ isActive }) =>
+          `ml-5 ${isActive ? "text-secondary font-bold border-b-2 border-secondary" : ""}`
+        }
+      >
+        <li>My Profile</li>
+      </NavLink>
+    )}
+
+    {!user && (
+      <>
+        <NavLink
+          to="/auth/login"
+          className={({ isActive }) =>
+            `ml-5 ${isActive ? "text-secondary font-bold border-b-2 border-secondary" : ""}`
+          }
+        >
+          <li>Login</li>
+        </NavLink>
+        <NavLink
+          to="/auth/register"
+          className={({ isActive }) =>
+            `ml-5 ${isActive ? "text-secondary font-bold border-b-2 border-secondary" : ""}`
+          }
+        >
+          <li>Register</li>
+        </NavLink>
+      </>
+    )}
+  </>
+);
   return (
     <div className="navbar  bg-base-100 shadow-sm   mx-auto">
       <div className="w-9/12 mx-auto flex">
